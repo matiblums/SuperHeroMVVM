@@ -20,11 +20,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="waP-cY-aPa">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="waP-cY-aPa">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GpY-Rf-e5g">
-                        <size key="itemSize" width="210" height="360"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HR8-AG-0zw">
+                        <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -42,6 +42,12 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGray3Color"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="waP-cY-aPa" secondAttribute="bottom" id="FYp-TH-fjh"/>
+                <constraint firstItem="waP-cY-aPa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HDn-dF-dNu"/>
+                <constraint firstItem="waP-cY-aPa" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fhc-lJ-zt5"/>
+                <constraint firstItem="waP-cY-aPa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="phl-4f-JtZ"/>
+            </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </view>
     </objects>

@@ -15,16 +15,16 @@ class HomeView: UIViewController {
     
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          
         
         viewModel.bind(view: self, router: router)
-        
         configureView()
         bind()
         initCollectionView()
+        self.title = "Superhero App"
     }
 
     private func configureView() {
@@ -49,7 +49,7 @@ class HomeView: UIViewController {
     }
 }
 
-extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return viewModel.dataArray.count
@@ -58,21 +58,36 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! HomeCollectionViewCell
-        //let cell : HomeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! HomeCollectionViewCell
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as!  HomeCollectionViewCell
-        
-         
         let object = viewModel.dataArray[indexPath.row]
         
         cell.itemImage.sd_setImage(with: URL(string: object.images.md), placeholderImage: UIImage(named: "placeholder.png"))
+        cell.itemImage.layer.cornerRadius = 10
+        cell.itemView.layer.cornerRadius = 10
         cell.nameLabel.text = object.name
-        cell.heightLabel.text = object.appearance.height[1]
-        cell.weightLabel.text = object.appearance.weight[1]
+        cell.heightLabel.text = "Height: \(object.appearance.height[1])"
+        cell.weightLabel.text = "Weight: \(object.appearance.height[1])"
         
         return cell
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+ 
+        return CGSize(width: view.frame.size.width / 2 - 30, height: view.frame.size.height / 3 - 60)
+         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
+    }
+    
 }
+
 

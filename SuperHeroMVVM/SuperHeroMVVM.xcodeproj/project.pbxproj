@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -143,7 +143,6 @@
 				CF045080B21B58577B6C291C /* Pods-SuperHeroMVVM.debug.xcconfig */,
 				FE052A1DC9A3B9C3AA3C77A7 /* Pods-SuperHeroMVVM.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

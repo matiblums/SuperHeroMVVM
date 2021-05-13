@@ -14,8 +14,6 @@ class HomeViewModel {
     private weak var view: HomeView?
     private var router: HomeRouter?
     
-    
-    
     func bind(view: HomeView, router: HomeRouter) {
         self.view = view
         self.router = router
@@ -33,18 +31,6 @@ class HomeViewModel {
     
     func retriveDataList() {
         guard let url = URL(string: "https://dev.consultr.net/superhero.json") else { return }
-        
-//        URLSession.shared.dataTask(with: url) { (data, response, error) in
-//
-//            guard let json = data else { return }
-//
-//            do {
-//                let decoder = JSONDecoder()
-//                self.dataArray = try decoder.decode(List.self, from: json)
-//            } catch let error {
-//                print("ha ocurrido un error: \(error.localizedDescription)")
-//            }
-//        }.resume()
         
         Alamofire.request(url).responseJSON { response in
             
