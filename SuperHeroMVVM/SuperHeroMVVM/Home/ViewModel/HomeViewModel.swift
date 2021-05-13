@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class HomeViewModel {
     
@@ -33,17 +34,30 @@ class HomeViewModel {
     func retriveDataList() {
         guard let url = URL(string: "https://dev.consultr.net/superhero.json") else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+//        URLSession.shared.dataTask(with: url) { (data, response, error) in
+//
+//            guard let json = data else { return }
+//
+//            do {
+//                let decoder = JSONDecoder()
+//                self.dataArray = try decoder.decode(List.self, from: json)
+//            } catch let error {
+//                print("ha ocurrido un error: \(error.localizedDescription)")
+//            }
+//        }.resume()
+        
+        Alamofire.request(url).responseJSON { response in
             
-            guard let json = data else { return }
-            
-            do {
-                let decoder = JSONDecoder()
-                self.dataArray = try decoder.decode(List.self, from: json)
-            } catch let error {
-                print("ha ocurrido un error: \(error.localizedDescription)")
+            if let data = response.data {
+                do {
+                    self.dataArray = try JSONDecoder().decode(List.self, from: data)
+                     
+                }catch {
+                    print("Parsing ranking from api fullError? ->> \(error)")
+                }
             }
-        }.resume()
+        }
+        
     }
     
 }

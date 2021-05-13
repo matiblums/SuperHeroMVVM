@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66842878E5B7BA04C8BD76C8 /* Pods_SuperHeroMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97E7A6D518DF1B4F8B66706 /* Pods_SuperHeroMVVM.framework */; };
 		CA3F06E4264CD926009E746B /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F06E2264CD926009E746B /* HomeCollectionViewCell.swift */; };
 		CA3F06E5264CD926009E746B /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3F06E3264CD926009E746B /* HomeCollectionViewCell.xib */; };
 		CAC4A135264C55DC001BED83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4A134264C55DC001BED83 /* AppDelegate.swift */; };
@@ -34,6 +35,9 @@
 		CAC686E8264CCF4800FB5D98 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		CAC686EC264CCFBF00FB5D98 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		CAC686EE264CD2EC00FB5D98 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CF045080B21B58577B6C291C /* Pods-SuperHeroMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroMVVM.debug.xcconfig"; path = "Target Support Files/Pods-SuperHeroMVVM/Pods-SuperHeroMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		F97E7A6D518DF1B4F8B66706 /* Pods_SuperHeroMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE052A1DC9A3B9C3AA3C77A7 /* Pods-SuperHeroMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroMVVM.release.xcconfig"; path = "Target Support Files/Pods-SuperHeroMVVM/Pods-SuperHeroMVVM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66842878E5B7BA04C8BD76C8 /* Pods_SuperHeroMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F4D72E1A03903B66A118544 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F97E7A6D518DF1B4F8B66706 /* Pods_SuperHeroMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CAC4A128264C55DC001BED83 = {
 			isa = PBXGroup;
 			children = (
 				CAC4A133264C55DC001BED83 /* SuperHeroMVVM */,
 				CAC4A132264C55DC001BED83 /* Products */,
+				D4BC4FEBEF60A54AA90F86F3 /* Pods */,
+				8F4D72E1A03903B66A118544 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +137,16 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		D4BC4FEBEF60A54AA90F86F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF045080B21B58577B6C291C /* Pods-SuperHeroMVVM.debug.xcconfig */,
+				FE052A1DC9A3B9C3AA3C77A7 /* Pods-SuperHeroMVVM.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAC4A145264C55E0001BED83 /* Build configuration list for PBXNativeTarget "SuperHeroMVVM" */;
 			buildPhases = (
+				AFCA8C062DE9475007CEFC60 /* [CP] Check Pods Manifest.lock */,
 				CAC4A12D264C55DC001BED83 /* Sources */,
 				CAC4A12E264C55DC001BED83 /* Frameworks */,
 				CAC4A12F264C55DC001BED83 /* Resources */,
+				03504D6EFCB0EDED17AA2A4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,6 +214,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03504D6EFCB0EDED17AA2A4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperHeroMVVM/Pods-SuperHeroMVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperHeroMVVM/Pods-SuperHeroMVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperHeroMVVM/Pods-SuperHeroMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFCA8C062DE9475007CEFC60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SuperHeroMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAC4A12D264C55DC001BED83 /* Sources */ = {
@@ -335,6 +404,7 @@
 		};
 		CAC4A146264C55E0001BED83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF045080B21B58577B6C291C /* Pods-SuperHeroMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -354,6 +424,7 @@
 		};
 		CAC4A147264C55E0001BED83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE052A1DC9A3B9C3AA3C77A7 /* Pods-SuperHeroMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

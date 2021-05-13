@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeView: UIViewController {
     
@@ -65,7 +66,7 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
          
         let object = viewModel.dataArray[indexPath.row]
         
-        
+        cell.itemImage.sd_setImage(with: URL(string: object.images.md), placeholderImage: UIImage(named: "placeholder.png"))
         cell.nameLabel.text = object.name
         cell.heightLabel.text = object.appearance.height[1]
         cell.weightLabel.text = object.appearance.weight[1]
