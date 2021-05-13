@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		66842878E5B7BA04C8BD76C8 /* Pods_SuperHeroMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97E7A6D518DF1B4F8B66706 /* Pods_SuperHeroMVVM.framework */; };
+		CA1E1FC9264DBD480057506A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1E1FC8264DBD480057506A /* APIClient.swift */; };
 		CA3F06E4264CD926009E746B /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F06E2264CD926009E746B /* HomeCollectionViewCell.swift */; };
 		CA3F06E5264CD926009E746B /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3F06E3264CD926009E746B /* HomeCollectionViewCell.xib */; };
 		CAC4A135264C55DC001BED83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4A134264C55DC001BED83 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA1E1FC8264DBD480057506A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		CA3F06E2264CD926009E746B /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA3F06E3264CD926009E746B /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		CAC4A131264C55DC001BED83 /* SuperHeroMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,14 @@
 				F97E7A6D518DF1B4F8B66706 /* Pods_SuperHeroMVVM.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA1E1FC7264DBD1C0057506A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CA1E1FC8264DBD480057506A /* APIClient.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		CAC4A128264C55DC001BED83 = {
@@ -98,6 +108,7 @@
 				CAC4A14A264C5614001BED83 /* View */,
 				CAC4A14B264C561F001BED83 /* ViewModel */,
 				CAC686EB264CCFA600FB5D98 /* Router */,
+				CA1E1FC7264DBD1C0057506A /* Api */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 				CAC686EF264CD2EC00FB5D98 /* HomeViewModel.swift in Sources */,
 				CAC686E9264CCF4800FB5D98 /* HomeView.swift in Sources */,
 				CA3F06E4264CD926009E746B /* HomeCollectionViewCell.swift in Sources */,
+				CA1E1FC9264DBD480057506A /* APIClient.swift in Sources */,
 				CAC4A135264C55DC001BED83 /* AppDelegate.swift in Sources */,
 				CAC686ED264CCFBF00FB5D98 /* HomeRouter.swift in Sources */,
 				CAC4A14F264C5666001BED83 /* List.swift in Sources */,
