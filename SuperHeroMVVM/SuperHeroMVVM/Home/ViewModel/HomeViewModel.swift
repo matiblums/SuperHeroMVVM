@@ -30,19 +30,13 @@ class HomeViewModel {
     }
     
     func retriveDataList() {
-        guard let url = URL(string: "https://dev.consultr.net/superhero.json") else { return }
-        
-        Alamofire.request(url).responseJSON { response in
+        APIClient.sharedInstance.retriveDataList(completionHandler: { [weak self ] (datos, error) in
             
-            if let data = response.data {
-                do {
-                    self.dataArray = try JSONDecoder().decode(List.self, from: data)
-                     
-                }catch {
-                    print("Parsing ranking from api fullError? ->> \(error)")
-                }
-            }
-        }
+            self?.dataArray = datos!
+            
+        }, errorHandler: { (errorDescription) in
+            print("error")
+        })
         
     }
     
