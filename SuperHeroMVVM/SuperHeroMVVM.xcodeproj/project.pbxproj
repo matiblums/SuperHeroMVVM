@@ -11,6 +11,14 @@
 		CA1E1FC9264DBD480057506A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1E1FC8264DBD480057506A /* APIClient.swift */; };
 		CA3F06E4264CD926009E746B /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F06E2264CD926009E746B /* HomeCollectionViewCell.swift */; };
 		CA3F06E5264CD926009E746B /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3F06E3264CD926009E746B /* HomeCollectionViewCell.xib */; };
+		CA9072A02650020100275BD1 /* SuperheroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA90729F2650020100275BD1 /* SuperheroTests.swift */; };
+		CA9072EA2650028900275BD1 /* SuperheroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9072E92650028900275BD1 /* SuperheroUITests.swift */; };
+		CAA626B92651B8310013F415 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA626B82651B8310013F415 /* Extensions.swift */; };
+		CAA626BD2651DD400013F415 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA626BB2651DD400013F415 /* DetailView.swift */; };
+		CAA626BE2651DD400013F415 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAA626BC2651DD400013F415 /* DetailView.xib */; };
+		CAA626C02651DE100013F415 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA626BF2651DE100013F415 /* DetailViewModel.swift */; };
+		CAA626C22651DECD0013F415 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA626C12651DECD0013F415 /* DetailRouter.swift */; };
+		CAA626CB265205BB0013F415 /* DetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA626CA265205BB0013F415 /* DetailList.swift */; };
 		CAC4A135264C55DC001BED83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4A134264C55DC001BED83 /* AppDelegate.swift */; };
 		CAC4A137264C55DC001BED83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4A136264C55DC001BED83 /* SceneDelegate.swift */; };
 		CAC4A13E264C55E0001BED83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC4A13D264C55E0001BED83 /* Assets.xcassets */; };
@@ -22,10 +30,39 @@
 		CAC686EF264CD2EC00FB5D98 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC686EE264CD2EC00FB5D98 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CA9072A22650020100275BD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAC4A129264C55DC001BED83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAC4A130264C55DC001BED83;
+			remoteInfo = SuperHeroMVVM;
+		};
+		CA9072EC2650028900275BD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAC4A129264C55DC001BED83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAC4A130264C55DC001BED83;
+			remoteInfo = SuperHeroMVVM;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		CA1E1FC8264DBD480057506A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		CA3F06E2264CD926009E746B /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA3F06E3264CD926009E746B /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		CA90729D2650020100275BD1 /* SuperheroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperheroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA90729F2650020100275BD1 /* SuperheroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroTests.swift; sourceTree = "<group>"; };
+		CA9072A12650020100275BD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9072E72650028900275BD1 /* SuperheroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperheroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9072E92650028900275BD1 /* SuperheroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroUITests.swift; sourceTree = "<group>"; };
+		CA9072EB2650028900275BD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAA626B82651B8310013F415 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CAA626BB2651DD400013F415 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		CAA626BC2651DD400013F415 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		CAA626BF2651DE100013F415 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		CAA626C12651DECD0013F415 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		CAA626CA265205BB0013F415 /* DetailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailList.swift; sourceTree = "<group>"; };
 		CAC4A131264C55DC001BED83 /* SuperHeroMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC4A134264C55DC001BED83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAC4A136264C55DC001BED83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +80,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA90729A2650020100275BD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA9072E42650028900275BD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAC4A12E264C55DC001BED83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,18 +113,98 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CA1E1FC7264DBD1C0057506A /* Api */ = {
+		CA90729E2650020100275BD1 /* SuperheroTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA90729F2650020100275BD1 /* SuperheroTests.swift */,
+				CA9072A12650020100275BD1 /* Info.plist */,
+			);
+			path = SuperheroTests;
+			sourceTree = "<group>";
+		};
+		CA9072E82650028900275BD1 /* SuperheroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA9072E92650028900275BD1 /* SuperheroUITests.swift */,
+				CA9072EB2650028900275BD1 /* Info.plist */,
+			);
+			path = SuperheroUITests;
+			sourceTree = "<group>";
+		};
+		CA9072F1265159C500275BD1 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
 				CA1E1FC8264DBD480057506A /* APIClient.swift */,
 			);
-			path = Api;
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		CAA626B62651B7F70013F415 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CAA626B72651B80E0013F415 /* Extensions */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CAA626B72651B80E0013F415 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CAA626B82651B8310013F415 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CAA626BA2651DD190013F415 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				CAA626C72652050F0013F415 /* View */,
+				CAA626C8265205210013F415 /* ViewModel */,
+				CAA626C5265204FE0013F415 /* Model */,
+				CAA626C92652054A0013F415 /* Router */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		CAA626C5265204FE0013F415 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAA626CA265205BB0013F415 /* DetailList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CAA626C72652050F0013F415 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAA626BB2651DD400013F415 /* DetailView.swift */,
+				CAA626BC2651DD400013F415 /* DetailView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CAA626C8265205210013F415 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CAA626BF2651DE100013F415 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CAA626C92652054A0013F415 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CAA626C12651DECD0013F415 /* DetailRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		CAC4A128264C55DC001BED83 = {
 			isa = PBXGroup;
 			children = (
 				CAC4A133264C55DC001BED83 /* SuperHeroMVVM */,
+				CA90729E2650020100275BD1 /* SuperheroTests */,
+				CA9072E82650028900275BD1 /* SuperheroUITests */,
 				CAC4A132264C55DC001BED83 /* Products */,
 				D4BC4FEBEF60A54AA90F86F3 /* Pods */,
 				8F4D72E1A03903B66A118544 /* Frameworks */,
@@ -84,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				CAC4A131264C55DC001BED83 /* SuperHeroMVVM.app */,
+				CA90729D2650020100275BD1 /* SuperheroTests.xctest */,
+				CA9072E72650028900275BD1 /* SuperheroUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +227,12 @@
 				CAC4A134264C55DC001BED83 /* AppDelegate.swift */,
 				CAC4A136264C55DC001BED83 /* SceneDelegate.swift */,
 				CAC4A148264C5601001BED83 /* Home */,
+				CAA626BA2651DD190013F415 /* DetailView */,
+				CAA626B62651B7F70013F415 /* Resources */,
 				CAC4A13D264C55E0001BED83 /* Assets.xcassets */,
 				CAC4A13F264C55E0001BED83 /* LaunchScreen.storyboard */,
 				CAC4A142264C55E0001BED83 /* Info.plist */,
+				CA9072F1265159C500275BD1 /* NetworkManager */,
 			);
 			path = SuperHeroMVVM;
 			sourceTree = "<group>";
@@ -108,7 +244,6 @@
 				CAC4A14A264C5614001BED83 /* View */,
 				CAC4A14B264C561F001BED83 /* ViewModel */,
 				CAC686EB264CCFA600FB5D98 /* Router */,
-				CA1E1FC7264DBD1C0057506A /* Api */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -160,6 +295,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA90729C2650020100275BD1 /* SuperheroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA9072A62650020100275BD1 /* Build configuration list for PBXNativeTarget "SuperheroTests" */;
+			buildPhases = (
+				CA9072992650020100275BD1 /* Sources */,
+				CA90729A2650020100275BD1 /* Frameworks */,
+				CA90729B2650020100275BD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA9072A32650020100275BD1 /* PBXTargetDependency */,
+			);
+			name = SuperheroTests;
+			productName = SuperheroTests;
+			productReference = CA90729D2650020100275BD1 /* SuperheroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA9072E62650028900275BD1 /* SuperheroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA9072EE2650028900275BD1 /* Build configuration list for PBXNativeTarget "SuperheroUITests" */;
+			buildPhases = (
+				CA9072E32650028900275BD1 /* Sources */,
+				CA9072E42650028900275BD1 /* Frameworks */,
+				CA9072E52650028900275BD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA9072ED2650028900275BD1 /* PBXTargetDependency */,
+			);
+			name = SuperheroUITests;
+			productName = SuperheroUITests;
+			productReference = CA9072E72650028900275BD1 /* SuperheroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CAC4A130264C55DC001BED83 /* SuperHeroMVVM */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAC4A145264C55E0001BED83 /* Build configuration list for PBXNativeTarget "SuperHeroMVVM" */;
@@ -188,6 +359,14 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					CA90729C2650020100275BD1 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CAC4A130264C55DC001BED83;
+					};
+					CA9072E62650028900275BD1 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CAC4A130264C55DC001BED83;
+					};
 					CAC4A130264C55DC001BED83 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -207,11 +386,27 @@
 			projectRoot = "";
 			targets = (
 				CAC4A130264C55DC001BED83 /* SuperHeroMVVM */,
+				CA90729C2650020100275BD1 /* SuperheroTests */,
+				CA9072E62650028900275BD1 /* SuperheroUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA90729B2650020100275BD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA9072E52650028900275BD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAC4A12F264C55DC001BED83 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +415,7 @@
 				CAC686EA264CCF4800FB5D98 /* HomeView.xib in Resources */,
 				CAC4A13E264C55E0001BED83 /* Assets.xcassets in Resources */,
 				CA3F06E5264CD926009E746B /* HomeCollectionViewCell.xib in Resources */,
+				CAA626BE2651DD400013F415 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,22 +464,56 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA9072992650020100275BD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9072A02650020100275BD1 /* SuperheroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA9072E32650028900275BD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9072EA2650028900275BD1 /* SuperheroUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAC4A12D264C55DC001BED83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CAC686EF264CD2EC00FB5D98 /* HomeViewModel.swift in Sources */,
+				CAA626B92651B8310013F415 /* Extensions.swift in Sources */,
 				CAC686E9264CCF4800FB5D98 /* HomeView.swift in Sources */,
+				CAA626BD2651DD400013F415 /* DetailView.swift in Sources */,
 				CA3F06E4264CD926009E746B /* HomeCollectionViewCell.swift in Sources */,
 				CA1E1FC9264DBD480057506A /* APIClient.swift in Sources */,
 				CAC4A135264C55DC001BED83 /* AppDelegate.swift in Sources */,
 				CAC686ED264CCFBF00FB5D98 /* HomeRouter.swift in Sources */,
 				CAC4A14F264C5666001BED83 /* List.swift in Sources */,
+				CAA626C22651DECD0013F415 /* DetailRouter.swift in Sources */,
+				CAA626CB265205BB0013F415 /* DetailList.swift in Sources */,
+				CAA626C02651DE100013F415 /* DetailViewModel.swift in Sources */,
 				CAC4A137264C55DC001BED83 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA9072A32650020100275BD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAC4A130264C55DC001BED83 /* SuperHeroMVVM */;
+			targetProxy = CA9072A22650020100275BD1 /* PBXContainerItemProxy */;
+		};
+		CA9072ED2650028900275BD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAC4A130264C55DC001BED83 /* SuperHeroMVVM */;
+			targetProxy = CA9072EC2650028900275BD1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CAC4A13F264C55E0001BED83 /* LaunchScreen.storyboard */ = {
@@ -297,6 +527,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CA9072A42650020100275BD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SuperheroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanacion.SuperheroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperHeroMVVM.app/SuperHeroMVVM";
+			};
+			name = Debug;
+		};
+		CA9072A52650020100275BD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SuperheroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanacion.SuperheroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperHeroMVVM.app/SuperHeroMVVM";
+			};
+			name = Release;
+		};
+		CA9072EF2650028900275BD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SuperheroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanacion.SuperheroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SuperHeroMVVM;
+			};
+			name = Debug;
+		};
+		CA9072F02650028900275BD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SuperheroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanacion.SuperheroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SuperHeroMVVM;
+			};
+			name = Release;
+		};
 		CAC4A143264C55E0001BED83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -456,6 +760,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA9072A62650020100275BD1 /* Build configuration list for PBXNativeTarget "SuperheroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA9072A42650020100275BD1 /* Debug */,
+				CA9072A52650020100275BD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA9072EE2650028900275BD1 /* Build configuration list for PBXNativeTarget "SuperheroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA9072EF2650028900275BD1 /* Debug */,
+				CA9072F02650028900275BD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CAC4A12C264C55DC001BED83 /* Build configuration list for PBXProject "SuperHeroMVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

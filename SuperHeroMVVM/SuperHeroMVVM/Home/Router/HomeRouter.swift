@@ -24,4 +24,9 @@ class HomeRouter {
         guard let view = sourceView else {fatalError("Error desconocido")}
         self.sourceView = view
     }
+    
+    func navigateToDetailView(movieID: String) {
+        let detailView = DetailRouter(movieID: movieID).viewController
+        sourceView?.navigationController?.pushViewController(detailView, animated: true)
+    }
 }

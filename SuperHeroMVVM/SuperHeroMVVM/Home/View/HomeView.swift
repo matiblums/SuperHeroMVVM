@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import RxSwift
 
 class HomeView: UIViewController {
     
@@ -16,21 +17,42 @@ class HomeView: UIViewController {
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var disposeBag = DisposeBag()
+    private var list = List()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         
+        
         
         viewModel.bind(view: self, router: router)
         configureView()
         bind()
         initCollectionView()
         self.title = "Superhero App"
+        
+        //getData()
     }
-
+    
+    private func getData() {
+        return viewModel.retriveDataListRxSwift()
+            .subscribe(on: MainScheduler.instance)
+            .observe(on: MainScheduler.instance)
+            .subscribe(
+                onNext: { list in
+                    self.list = list
+                    self.collectionView.reloadData()
+                }, onError: { error in
+                    print(error.localizedDescription)
+                },onCompleted:{
+                    
+                }).disposed(by: disposeBag)
+    }
+    
     private func configureView() {
         activity.isHidden = false
         activity.startAnimating()
-        viewModel.retriveDataList()
+        //viewModel.retriveDataListAlamofire()
+        viewModel.retriveDataListURLSession()
     }
     
     private func bind() {
@@ -61,7 +83,8 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as!  HomeCollectionViewCell
         let object = viewModel.dataArray[indexPath.row]
         
-        cell.itemImage.sd_setImage(with: URL(string: object.images.md), placeholderImage: UIImage(named: "placeholder.png"))
+        //cell.itemImage.sd_setImage(with: URL(string: object.images.md), placeholderImage: UIImage(named: "placeholder.png"))
+        cell.itemImage.imageFromServerURL(urlString: object.images.md, placeHolderImage: UIImage(named: "placeholder.png")!)
         cell.itemImage.layer.cornerRadius = 10
         cell.itemView.layer.cornerRadius = 10
         cell.nameLabel.text = object.name
@@ -73,9 +96,9 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
- 
+        
         return CGSize(width: view.frame.size.width / 2 - 30, height: view.frame.size.height / 3 - 60)
-         
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -86,6 +109,12 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         return UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        viewModel.makeDetailView(movieID: "s")
+        
     }
     
 }
