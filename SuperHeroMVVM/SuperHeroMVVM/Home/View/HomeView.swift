@@ -67,16 +67,15 @@ class HomeView: UIViewController, ManagerConnectionData {
     }
     
     func getDataURLSession() {
-        APIClient.sharedInstance.retriveDataListURLSession(completionHandler: { [weak self ] (datos, error) in
+        APIClient.sharedInstance.retriveDataListURLSession(datos: "") {completionHandler  in
+            DispatchQueue.main.async {
+                self.list = completionHandler
+                self.collectionView.reloadData()
+                self.activity.isHidden = true
+                self.activity.stopAnimating()
+            }
             
-            self?.list = datos!
-            self?.collectionView.reloadData()
-            self?.activity.isHidden = true
-            self?.activity.stopAnimating()
-            
-        }, errorHandler: { (errorDescription) in
-            print("error")
-        })
+        }
         
     }
     

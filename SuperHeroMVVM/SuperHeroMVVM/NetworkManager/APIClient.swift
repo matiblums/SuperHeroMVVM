@@ -62,7 +62,7 @@ class APIClient : NSObject {
         }
     }
     
-    func retriveDataListURLSession(completionHandler: @escaping ArrayErrorResponse, errorHandler:@escaping StringResponse) {
+    func retriveDataListURLSession(datos: String, completionHandler: @escaping ([ListElement])-> ()) {
         
         guard let url = URL(string: "https://dev.consultr.net/superhero.json") else { return }
         
@@ -70,7 +70,7 @@ class APIClient : NSObject {
             
             do {
                 let list = try JSONDecoder().decode(List.self, from: data!)
-                completionHandler(list, nil)
+                completionHandler(list)
             } catch let error {
                 print("ha ocurrido un error: \(error.localizedDescription)")
             }

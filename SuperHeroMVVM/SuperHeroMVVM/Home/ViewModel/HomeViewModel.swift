@@ -42,16 +42,7 @@ class HomeViewModel {
         
     }
     
-    func retriveDataListURLSession() {
-        APIClient.sharedInstance.retriveDataListURLSession(completionHandler: { [weak self ] (datos, error) in
-            
-            self?.dataArray = datos!
-            
-        }, errorHandler: { (errorDescription) in
-            print("error")
-        })
-        
-    }
+     
     
     func retriveDataListRxSwift() -> Observable<List> {
         return managerConnections.retriveDataListRxSwift()
