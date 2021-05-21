@@ -12,9 +12,35 @@ import RxSwift
 typealias ArrayErrorResponse = ([ListElement]?, Error?) -> Void
 typealias StringResponse = (String?) -> Void
 
+protocol ManagerConnectionData {
+    
+    func obtenerDatos(data: List)
+    
+}
+
 class APIClient : NSObject {
     
     static let sharedInstance = APIClient()
+    
+    func retriveDataListDelegate(datos: String, delegate: ManagerConnectionData) {
+        
+        guard let url = URL(string: "https://dev.consultr.net/superhero.json") else { return }
+        
+        Alamofire.request(url).responseJSON { response in
+            
+            if let data = response.data {
+                do {
+                    let list = try JSONDecoder().decode(List.self, from: data)
+                    delegate.obtenerDatos(data: list)
+                }catch {
+                    print("LN123 Parsing ranking from api fullError? ->> \(error)")
+                }
+            }
+            else{
+                //errorHandler("The request is invalid.")
+            }
+        }
+    }
     
     func retriveDataListAlamofire(completionHandler: @escaping ArrayErrorResponse, errorHandler:@escaping StringResponse) {
         

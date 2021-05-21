@@ -9,10 +9,13 @@ import UIKit
 import SDWebImage
 import RxSwift
 
-class HomeView: UIViewController {
+class HomeView: UIViewController, ManagerConnectionData {
+    
     
     private var router = HomeRouter()
     private var viewModel = HomeViewModel()
+    
+    private var apiclient = APIClient()
     
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -20,27 +23,42 @@ class HomeView: UIViewController {
     private var disposeBag = DisposeBag()
     private var list = List()
     
+    let manageConnection = APIClient()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         viewModel.bind(view: self, router: router)
         configureView()
-        bind()
         initCollectionView()
         self.title = "Superhero App"
         
-        //getData()
+        
+    }
+    
+    func obtenerDatos(data: List) {
+        self.list = data
+        self.collectionView.reloadData()
+        activity.isHidden = true
+        activity.stopAnimating()
+    }
+    
+    private func getDataDelegate() {
+        manageConnection.retriveDataListDelegate(datos: "", delegate: self)
     }
     
     private func getData() {
-        return viewModel.retriveDataListRxSwift()
+        return apiclient.retriveDataListRxSwift()
             .subscribe(on: MainScheduler.instance)
             .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { list in
                     self.list = list
                     self.collectionView.reloadData()
+                    self.activity.isHidden = true
+                    self.activity.stopAnimating()
                 }, onError: { error in
                     print(error.localizedDescription)
                 },onCompleted:{
@@ -48,21 +66,28 @@ class HomeView: UIViewController {
                 }).disposed(by: disposeBag)
     }
     
+    func getDataURLSession() {
+        APIClient.sharedInstance.retriveDataListURLSession(completionHandler: { [weak self ] (datos, error) in
+            
+            self?.list = datos!
+            self?.collectionView.reloadData()
+            self?.activity.isHidden = true
+            self?.activity.stopAnimating()
+            
+        }, errorHandler: { (errorDescription) in
+            print("error")
+        })
+        
+    }
+    
     private func configureView() {
         activity.isHidden = false
         activity.startAnimating()
         //viewModel.retriveDataListAlamofire()
-        viewModel.retriveDataListURLSession()
-    }
-    
-    private func bind() {
-        viewModel.refreshData = { [weak self] () in
-            DispatchQueue.main.async {
-                self?.collectionView.reloadData()
-                self?.activity.stopAnimating()
-                self?.activity.isHidden = true
-            }
-        }
+        //viewModel.retriveDataListURLSession()
+        //getData()
+        //getDataDelegate()
+        getDataURLSession()
     }
     
     private func initCollectionView() {
@@ -74,14 +99,14 @@ class HomeView: UIViewController {
 extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return viewModel.dataArray.count
+        return list.count
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as!  HomeCollectionViewCell
-        let object = viewModel.dataArray[indexPath.row]
+        let object = list[indexPath.row]
         
         //cell.itemImage.sd_setImage(with: URL(string: object.images.md), placeholderImage: UIImage(named: "placeholder.png"))
         cell.itemImage.imageFromServerURL(urlString: object.images.md, placeHolderImage: UIImage(named: "placeholder.png")!)
